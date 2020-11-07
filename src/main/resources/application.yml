@@ -1,1 +1,17 @@
+server:
+  port: 8080
+
+template:
+  templates:
+    - {"templateId":"1", "templateFilePath":"D:/work/IdeaProjects/kafka_study/src/main/resources/template/template.json", "active": true}
+    - {"templateId":"2", "templateFilePath":"D:/work/IdeaProjects/kafka_study/src/main/resources/template/template.json", "active": false}
+#    0：文件获取，1：数据库获取，2：ES
+  template-result-type: 0
+  template-result-file-path: "D:/work/IdeaProjects/kafka_study/src/main/resources/template/templateResult.json"
+
+wechat:
+  kafka:
+    bootstrap_servers: 47.102.115.74:9092
+    acks_config: "all"
+    partitioner_class: "com.and.kafka.producer.SamplePartition"
 
